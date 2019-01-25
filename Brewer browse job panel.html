@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Brewer browse job panel</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="img/icons/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="img/icons/default.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/owl.theme.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/owl.transitions.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--Your custom colour override - predefined colours are: colour-blue.css, colour-green.css, colour-lavander.css, orange is default-->
+    <link href="css/colour-blue.css" id="colour-scheme" rel="stylesheet">
+
+
+</head>
+
+<body class="page-index has-hero" style="background: rgb(231, 231, 231);">
+    <!--Change the background class to alter background image, options are: benches, boots, buildings, city, metro -->
+    <div id="background-wrapper" class="buildings" data-stellar-background-ratio="0.1">
+
+        <!-- ======== @Region: #navigation ======== -->
+        <div id="navigation" class="wrapper">
+            <!--Hidden Header Region-->
+            <div class="header-hidden collapse">
+                <div class="header-hidden-inner container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3>
+                                About Us
+                            </h3>
+                            <!-- <p>Flexor is a super flexible responsive theme with a modest design touch.</p> -->
+                            <a href="about.html" class="btn btn-more"><i class="fa fa-plus"></i> Learn more</a>
+                        </div>
+                        <div class="col-md-3">
+                            <!--@todo: replace with company contact details-->
+                            <h3>
+                                Contact Us
+                            </h3>
+                            <address>
+                  <strong>Flexor Bootstrap Theme Inc</strong>
+                  <abbr title="Address"><i class="fa fa-pushpin"></i></abbr>
+                  Sunshine House, Sunville. SUN12 8LU.
+                  <br>
+                  <abbr title="Phone"><i class="fa fa-phone"></i></abbr>
+                  019223 8092344
+                  <br>
+                  <abbr title="Email"><i class="fa fa-envelope-alt"></i></abbr>
+                  info@Brewery.com
+                </address>
+                        </div>
+                        <div class="col-md-6">
+                            <!--Colour & Background Switch for demo - @todo: remove in production-->
+                            <h3>
+                                Theme Variations
+                            </h3>
+                            <div class="switcher">
+                                <div class="cols">
+                                    Backgrounds:
+                                    <br>
+                                    <a href="#benches" class="background benches active" title="Benches">Benches</a> <a href="#boots" class="background boots " title="Boots">Boots</a> <a href="#buildings" class="background buildings " title="Buildings">Buildings</a>
+                                    <a href="#city" class="background city " title="City">City</a> <a href="#metro" class="background metro " title="Metro">Metro</a>
+                                </div>
+                                <div class="cols">
+                                    Colours:
+                                    <br>
+                                    <a href="#orange" class="colour orange active" title="Orange">Orange</a> <a href="#green" class="colour green " title="Green">Green</a> <a href="#blue" class="colour blue " title="Blue">Blue</a> <a href="#lavender"
+                                        class="colour lavender " title="Lavender">Lavender</a>
+                                </div>
+                            </div>
+                            <p>
+                                <small>Selection is not persistent.</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Header & navbar-branding region-->
+            <div class="header">
+                <div class="header-inner container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!--navbar-branding/logo - hidden image tag & site name so things like Facebook to pick up, actual logo set via CSS for flexibility -->
+                            <a class="navbar-brand" href="index.html" title="Home">
+                                <h1>
+                                    <!-- class="hidden" -->
+                                    <img src="" alt=" Logo"> Logo
+                                </h1>
+                            </a>
+
+                        </div>
+                        <!--header rightside-->
+                        <div class="col-md-4">
+                            <!--user menu-->
+                            <ul class="list-inline user-menu pull-right">
+                            </ul>
+                            <ul class="list-inline user-menu pull-right">
+                                <li class="user-register"><i class="fa fa-edit text-primary "></i> <a href="register.html" class="text-uppercase">SignUp</a></li>
+                                <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="login.html" class="text-uppercase">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="navbar navbar-default">
+                    <!--mobile collapse menu button-->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <!--social media icons-->
+                    <div class="navbar-text social-media social-media-inline pull-right">
+                    </div>
+                    <!--everything within this div is collapsed on mobile-->
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav" id="main-menu">
+                            <li class="icon-link">
+                                <a href="flexor-index.html"><i class="fa fa-home"></i></a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Talent Sourcing<b class="caret"></b></a>
+                                <!-- Dropdown Menu -->
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" tabindex="-1" class="menu-item">Post Jobs</a></li>
+                                    <li><a href="#" tabindex="-1" class="menu-item">Browse Jobs</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+                                <!-- Dropdown Menu -->
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" tabindex="-1" class="menu-item">View Events</a></li>
+                                    <li><a href="#" tabindex="-1" class="menu-item">Send celebration note</a></li>
+                                    <li><a href="#" tabindex="-1" class="menu-item">message</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+
+                                <!-- Dropdown Menu -->
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" tabindex="-1" class="menu-item">Browse Projects</a></li>
+                                    <li><a href="#" tabindex="-1" class="menu-item">Post Project</a></li>
+                                    <li><a href="#" tabindex="-1" class="menu-item">Browse idea</a></li>
+                                    <li><a href="#" tabindex="-1" class="menu-item">Post idea</a></li>
+                                    <li><a href="#" tabindex="-1" class="menu-item">Post Bussiness Enquire</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="#">Suppliers</a></li>
+
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notifications<b class="caret"></b></a>
+
+                                <!-- Dropdown Menu -->
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" tabindex="-1" class="menu-item">View Notifications1</a></li>
+                                    <li><a href="#" tabindex="-1" class="menu-item">View Notifications2</a></li>
+                                    <li><a href="#" tabindex="-1" class="menu-item">View Notifications3</a></li>
+                                    <li><a href="#" tabindex="-1" class="menu-item">View Notifications4</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="#">Premium Services</a></li>
+
+
+
+                            <li>
+                                <a href="#">
+                                    <img src="" class=" fa fa-lg fa-user-circle-o"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.navbar-collapse -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <hr class="">
+    <div class=" container-fluid" id="container-job">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="#" class="pull-left"><img title="profile image" class="img-circle img-responsive" src="img/user-profile.png"></a>
+                <h1 class="">User_name</h1>
+                <ul class=" list-group ">
+                    <li class="list-group-item text-muted " contenteditable="false ">Profile info</li>
+                    <li class="list-group-item text-right "><span class="pull-left "><strong class=" ">Name</strong></span> XYz</li>
+                    </li>
+                    <li class="list-group-item text-right "><span class="pull-left "><strong class=" ">Role: </strong></span> ABC
+                    </li>
+                    <li class="list-group-item text-right "><span class="pull-left "><strong class=" ">Role: </strong></span> ABC
+                    </li>
+                    <li class="list-group-item text-right "><span class="pull-left "><strong class=" ">Role: </strong></span> ABC
+                    </li>
+                    <li class="list-group-item text-right "><span class="pull-left "><strong class=" ">Role: </strong></span> ABC
+                    </li>
+                    <li class="list-group-item text-right "><span class="pull-left "><strong class=" ">Role: </strong></span> ABC
+                    </li>
+                    <li class="list-group-item text-right "><span class="pull-left "><strong class=" ">Role: </strong></span> ABC
+                    </li>
+                    <li class="list-group-item text-right "><span class="pull-left "><strong class=" ">Role: </strong></span> ABC
+                    </li>
+                    <li class="list-group-item text-right "><span class="pull-left "><strong class=" ">Role: </strong></span> ABC
+                    </li>
+
+                </ul>
+                <div class="panel panel-default ">
+                    <div class="panel-heading ">Social Media</div>
+                    <div class="panel-body "> <i class="fa fa-facebook fa-2x "></i> <i class="fa fa-github fa-2x "></i>
+                        <i class="fa fa-twitter fa-2x "></i> <i class="fa fa-pinterest fa-2x "></i> <i class="fa fa-google-plus fa-2x "></i>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9" contenteditable="false" style=" margin-block-start: 0%; ">
+                <div class="panel panel-default target ">
+                    <div class="panel-heading " contenteditable="false ">Post / Browse job
+
+
+                        <form action="" method="GET" class="form-main  form-inline nofloat-xs pull-right pull-left-sm">
+
+                            <div class="form-group form-input-fields form-group-sm has-feedback">
+
+                                <label class="sr-only" for="search">Search</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-search" name="q" id="search" placeholder="Search">
+                                    <span class="input-group-addon"> <span class="glyphicon"></span>
+                                    </span>
+                                </div>
+
+                                <button type="submit" class="btn btn-sm btn-secondary btn-submit">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search 
+                                        </button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+                <div class="panel-body ">
+                    <div class="row ">
+                        <div class="col-md-6 ">
+                            <div class="thumbnail " style="border: 1px solid #ECECEC;
+                                overflow: hidden;
+                                background: #fff;
+                                border-radius: 20px;">
+                                <!-- <img alt="300x200 " src="#"> -->
+                                <div class="caption ">
+                                    <h5 style="border-bottom:3px solid #ececec">
+                                        Exalead Opening with Dassault Systemes, Pune
+                                    </h5>
+                                    <p>
+                                        <label>
+                                            <span class="fa fa-lg fa-briefcase">&nbsp;3 - 8 years </span> <br>
+                                            <span class="fa fa-lg fa-inr">&nbsp; Not disclosed</span><br>
+                                            <span class="fa fa-lg fa-location-arrow">&nbsp; Pune</span><br>
+                                        </label> <br> <strong> Job Description: </strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores hic Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odio, eos. In id quas velit unde, dolorem nulla dolor assumenda modi debitis ducimus adipisci, quaerat dolorum perferendis. Nihil consequatur minima sed.
+
+                                    </p>
+                                    <button class="btn btn-primary"> apply</button>
+
+
+                                </div>
+                                <footer class="entry-footer" style="display:block; padding: 0 15px;
+                                    background: #ececec;">
+                                    <div style=" display:block; padding: 0 15px;">Posted 1 day ago</div>
+                                </footer>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <div class="thumbnail " style="border: 1px solid #ECECEC;
+                                overflow: hidden;
+                                background: #fff;
+                                border-radius: 20px;">
+                                <!-- <img alt="300x200 " src="#"> -->
+                                <div class="caption ">
+                                    <h5 style="border-bottom:3px solid #ececec">
+                                        Exalead Opening with Dassault Systemes, Pune
+                                    </h5>
+                                    <p>
+                                        <label>
+                                            <span class="fa fa-lg fa-briefcase">&nbsp;3 - 8 years </span> <br>
+                                            <span class="fa fa-lg fa-inr">&nbsp; Not disclosed</span><br>
+                                            <span class="fa fa-lg fa-location-arrow">&nbsp; Pune</span><br>
+                                        </label> <br> <strong> Job Description: </strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores hic Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odio, eos. In id quas velit unde, dolorem nulla dolor assumenda modi debitis ducimus adipisci, quaerat dolorum perferendis. Nihil consequatur minima sed.
+
+                                    </p>
+                                    <button class="btn btn-primary"> apply</button>
+
+
+                                </div>
+                                <footer class="entry-footer" style="display:block; padding: 0 15px;
+                                    background: #ececec;">
+                                    <div style="display:block; padding: 0 15px;">Posted 1 day ago</div>
+                                </footer>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <div class="thumbnail " style="border: 1px solid #ECECEC;
+                                overflow: hidden;
+                                background: #fff;
+                                border-radius: 20px;">
+                                <!-- <img alt="300x200 " src="#"> -->
+                                <div class="caption ">
+                                    <h5 style="border-bottom:3px solid #ececec">
+                                        Exalead Opening with Dassault Systemes, Pune
+                                    </h5>
+                                    <p>
+                                        <label>
+                                            <span class="fa fa-lg fa-briefcase">&nbsp;3 - 8 years </span> <br>
+                                            <span class="fa fa-lg fa-inr">&nbsp; Not disclosed</span><br>
+                                            <span class="fa fa-lg fa-location-arrow">&nbsp; Pune</span><br>
+                                        </label> <br> <strong> Job Description: </strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores hic Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odio, eos. In id quas velit unde, dolorem nulla dolor assumenda modi debitis ducimus adipisci, quaerat dolorum perferendis. Nihil consequatur minima sed.
+
+                                    </p>
+                                    <button class="btn btn-primary"> apply</button>
+
+
+                                </div>
+                                <footer class="entry-footer" style="display:block; padding: 0 15px;
+                                    background: #ececec;">
+                                    <div style="display:block; padding: 0 15px;">Posted 1 day ago</div>
+                                </footer>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <div class="thumbnail " style="border: 1px solid #ECECEC;
+                                overflow: hidden;
+                                background: #fff;
+                                border-radius: 20px;">
+                                <!-- <img alt="300x200 " src="#"> -->
+                                <div class="caption ">
+                                    <h5 style="border-bottom:3px solid #ececec">
+                                        Exalead Opening with Dassault Systemes, Pune
+                                    </h5>
+                                    <p>
+                                        <label>
+                                            <span class="fa fa-lg fa-briefcase">&nbsp;3 - 8 years </span> <br>
+                                            <span class="fa fa-lg fa-inr">&nbsp; Not disclosed</span><br>
+                                            <span class="fa fa-lg fa-location-arrow">&nbsp; Pune</span><br>
+                                        </label> <br> <strong> Job Description: </strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores hic Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odio, eos. In id quas velit unde, dolorem nulla dolor assumenda modi debitis ducimus adipisci, quaerat dolorum perferendis. Nihil consequatur minima sed.
+
+                                    </p>
+                                    <button class="btn btn-primary"> apply</button>
+
+
+                                </div>
+                                <footer class="entry-footer" style="display:block; padding: 0 15px;
+                                    background: #ececec;">
+                                    <div style="display:block; padding: 0 15px;">Posted 1 day ago</div>
+                                </footer>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <div class="thumbnail " style="border: 1px solid #ECECEC;
+                                overflow: hidden;
+                                background: #fff;
+                                border-radius: 20px;">
+                                <!-- <img alt="300x200 " src="#"> -->
+                                <div class="caption ">
+                                    <h5 style="border-bottom:3px solid #ececec">
+                                        Exalead Opening with Dassault Systemes, Pune
+                                    </h5>
+                                    <p>
+                                        <label>
+                                            <span class="fa fa-lg fa-briefcase">&nbsp;3 - 8 years </span> <br>
+                                            <span class="fa fa-lg fa-inr">&nbsp; Not disclosed</span><br>
+                                            <span class="fa fa-lg fa-location-arrow">&nbsp; Pune</span><br>
+                                        </label> <br> <strong> Job Description: </strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores hic Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odio, eos. In id quas velit unde, dolorem nulla dolor assumenda modi debitis ducimus adipisci, quaerat dolorum perferendis. Nihil consequatur minima sed.
+
+                                    </p>
+                                    <button class="btn btn-primary"> apply</button>
+
+
+                                </div>
+                                <footer class="entry-footer" style="display:block; padding: 0 15px;
+                                    background: #ececec;">
+                                    <div style="display:block; padding: 0 15px;">Posted 1 day ago</div>
+                                </footer>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <div class="thumbnail " style="border: 1px solid #ECECEC;
+                                overflow: hidden;
+                                background: #fff;
+                                border-radius: 20px;">
+                                <!-- <img alt="300x200 " src="#"> -->
+                                <div class="caption ">
+                                    <h5 style="border-bottom:3px solid #ececec">
+                                        Exalead Opening with Dassault Systemes, Pune
+                                    </h5>
+                                    <p>
+                                        <label>
+                                            <span class="fa fa-lg fa-briefcase">&nbsp;3 - 8 years </span> <br>
+                                            <span class="fa fa-lg fa-inr">&nbsp; Not disclosed</span><br>
+                                            <span class="fa fa-lg fa-location-arrow">&nbsp; Pune</span><br>
+                                        </label> <br> <strong> Job Description: </strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores hic Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odio, eos. In id quas velit unde, dolorem nulla dolor assumenda modi debitis ducimus adipisci, quaerat dolorum perferendis. Nihil consequatur minima sed.
+
+                                    </p>
+                                    <button class="btn btn-primary"> apply</button>
+
+
+                                </div>
+                                <footer class="entry-footer" style="display:block; padding: 0 15px;
+                                    background: #ececec;">
+                                    <div style="display:block; padding: 0 15px;">Posted 1 day ago</div>
+                                </footer>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <div class="thumbnail " style="border: 1px solid #ECECEC;
+                                overflow: hidden;
+                                background: #fff;
+                                border-radius: 20px;">
+                                <!-- <img alt="300x200 " src="#"> -->
+                                <div class="caption ">
+                                    <h5 style="border-bottom:3px solid #ececec">
+                                        Exalead Opening with Dassault Systemes, Pune
+                                    </h5>
+                                    <p>
+                                        <label>
+                                            <span class="fa fa-lg fa-briefcase">&nbsp;3 - 8 years </span> <br>
+                                            <span class="fa fa-lg fa-inr">&nbsp; Not disclosed</span><br>
+                                            <span class="fa fa-lg fa-location-arrow">&nbsp; Pune</span><br>
+                                        </label> <br> <strong> Job Description: </strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores hic Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odio, eos. In id quas velit unde, dolorem nulla dolor assumenda modi debitis ducimus adipisci, quaerat dolorum perferendis. Nihil consequatur minima sed.
+
+                                    </p>
+                                    <button class="btn btn-primary"> apply</button>
+
+
+                                </div>
+                                <footer class="entry-footer" style="display:block; padding: 0 15px;
+                                    background: #ececec;">
+                                    <div style="display:block; padding: 0 15px;">Posted 1 day ago</div>
+                                </footer>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <div class="thumbnail " style="border: 1px solid #ECECEC;
+                                overflow: hidden;
+                                background: #fff;
+                                border-radius: 20px;">
+                                <!-- <img alt="300x200 " src="#"> -->
+                                <div class="caption ">
+                                    <h5 style="border-bottom:3px solid #ececec">
+                                        Exalead Opening with Dassault Systemes, Pune
+                                    </h5>
+                                    <p>
+                                        <label>
+                                            <span class="fa fa-lg fa-briefcase">&nbsp;3 - 8 years </span> <br>
+                                            <span class="fa fa-lg fa-inr">&nbsp; Not disclosed</span><br>
+                                            <span class="fa fa-lg fa-location-arrow">&nbsp; Pune</span><br>
+                                        </label> <br> <strong> Job Description: </strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores hic Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odio, eos. In id quas velit unde, dolorem nulla dolor assumenda modi debitis ducimus adipisci, quaerat dolorum perferendis. Nihil consequatur minima sed.
+
+                                    </p>
+                                    <button class="btn btn-primary"> apply</button>
+
+
+                                </div>
+                                <footer class="entry-footer" style="display:block; padding: 0 15px;
+                                    background: #ececec;">
+                                    <div style="display:block; padding: 0 15px;">Posted 1 day ago</div>
+                                </footer>
+                            </div>
+                        </div>
+
+                        <button type="button" target="https://www.google.com" class="btn btn-link">Show all....</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    <div id="push "></div>
+    </div>
+
+    <script src="/plugins/bootstrap-select.min.js "></script>
+    <script src="/codemirror/jquery.codemirror.js "></script>
+    <script src="/beautifier.js "></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-40413119-1', 'bootply.com');
+        ga('send', 'pageview');
+    </script>
+    <script>
+        jQuery.fn.shake = function(intShakes, intDistance, intDuration, foreColor) {
+            this.each(function() {
+                if (foreColor && foreColor != "null ") {
+                    $(this).css("color ", foreColor);
+                }
+                $(this).css("position ", "relative ");
+                for (var x = 1; x <= intShakes; x++) {
+                    $(this).animate({
+                            left: (intDistance * -1)
+                        }, (((intDuration / intShakes) / 4)))
+                        .animate({
+                            left: intDistance
+                        }, ((intDuration / intShakes) / 2))
+                        .animate({
+                            left: 0
+                        }, (((intDuration / intShakes) / 4)));
+                    $(this).css("color ", " ");
+                }
+            });
+            return this;
+        };
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            $('.tw-btn').fadeIn(3000);
+            $('.alert').delay(5000).fadeOut(1500);
+
+            $('#btnLogin').click(function() {
+                $(this).text("... ");
+                $.ajax({
+                    url: "/loginajax ",
+                    type: "post ",
+                    data: $('#formLogin').serialize(),
+                    success: function(data) {
+                        //console.log('data:'+data);
+                        if (data.status == 1 && data.user) { //logged in
+                            $('#menuLogin').hide();
+                            $('#lblUsername').text(data.user.username);
+                            $('#menuUser').show();
+                            /*
+                            $('#completeLoginModal').modal('show');
+                            $('#btnYes').click(function() {
+                                window.location.href="/ ";
+                            });
+                            */
+                        } else {
+                            $('#btnLogin').text("Login ");
+                            prependAlert("#spacer ", data.error);
+                            $('#btnLogin').shake(4, 6, 700, '#CC2222');
+                            $('#username').focus();
+                        }
+                    },
+                    error: function(e) {
+                        $('#btnLogin').text("Login ");
+                        console.log('error:' + JSON.stringify(e));
+                    }
+                });
+            });
+            $('#btnRegister').click(function() {
+                $(this).text("Wait.. ");
+                $.ajax({
+                    url: "/signup?format=json ",
+                    type: "post ",
+                    data: $('#formRegister').serialize(),
+                    success: function(data) {
+                        console.log('data:' + JSON.stringify(data));
+                        if (data.status == 1) {
+                            $('#btnRegister').attr("disabled ", "disabled ");
+                            $('#formRegister').text('Thanks. You can now login using the Login form.');
+                        } else {
+                            prependAlert("#spacer ", data.error);
+                            $('#btnRegister').shake(4, 6, 700, '#CC2222');
+                            $('#btnRegister').text("Sign Up ");
+                            $('#inputEmail').focus();
+                        }
+                    },
+                    error: function(e) {
+                        $('#btnRegister').text("Sign Up ");
+                        console.log('error:' + e);
+                    }
+                });
+            });
+
+            $('.loginFirst').click(function() {
+                $('#navLogin').trigger('click');
+                return false;
+            });
+
+            $('#btnForgotPassword').on('click', function() {
+                $.ajax({
+                    url: "/resetPassword ",
+                    type: "post ",
+                    data: $('#formForgotPassword').serializeObject(),
+                    success: function(data) {
+                        if (data.status == 1) {
+                            prependAlert("#spacer ", data.msg);
+                            return true;
+                        } else {
+                            prependAlert("#spacer ", "Your password could not be reset. ");
+                            return false;
+                        }
+                    },
+                    error: function(e) {
+                        console.log('error:' + e);
+                    }
+                });
+            });
+
+            $('#btnContact').click(function() {
+
+                $.ajax({
+                    url: "/contact ",
+                    type: "post ",
+                    data: $('#formContact').serializeObject(),
+                    success: function(data) {
+                        if (data.status == 1) {
+                            prependAlert("#spacer ", "Thanks. We got your message and will get back to you shortly. ");
+                            $('#contactModal').modal('hide');
+                            return true;
+                        } else {
+                            prependAlert("#spacer ", data.error);
+                            return false;
+                        }
+                    },
+                    error: function(e) {
+                        console.log('error:' + e);
+                    }
+                });
+                return false;
+            });
+
+            /*
+            $('.nav .dropdown-menu input').on('click touchstart',function(e) {
+                e.stopPropagation();
+            });
+            */
+
+
+
+
+
+        });
+        $.fn.serializeObject = function() {
+            var o = {};
+            var a = this.serializeArray();
+            $.each(a, function() {
+                if (o[this.name] !== undefined) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                } else {
+                    o[this.name] = this.value || '';
+                }
+            });
+            return o;
+        };
+        var prependAlert = function(appendSelector, msg) {
+            $(appendSelector).after('<div class="alert alert-info alert-block affix " id="msgBox " style="z-index:1300;margin:14px!important; ">' + msg + '</div>');
+            $('.alert').delay(3500).fadeOut(1000);
+        }
+    </script>
+    <!-- Quantcast Tag -->
+    <script type="text/javascript ">
+        var _qevents = _qevents || [];
+
+        (function() {
+            var elem = document.createElement('script');
+            elem.src = (document.location.protocol == "https: " ? "https://secure " : "http://edge ") + ".quantserve.com/quant.js ";
+            elem.async = true;
+            elem.type = "text/javascript ";
+            var scpt = document.getElementsByTagName('script')[0];
+            scpt.parentNode.insertBefore(elem, scpt);
+        })();
+
+        _qevents.push({
+            qacct: "p-0cXb7ATGU9nz5 "
+        });
+    </script>
+    <noscript>
+                &amp;amp;amp;amp;amp;amp;lt;div style="display:none; "&amp;amp;amp;amp;amp;amp;gt;
+                &amp;amp;amp;amp;amp;amp;lt;img src="//pixel.quantserve.com/pixel/p-0cXb7ATGU9nz5.gif " border="0 " height="1 " width="1 " alt="Quantcast "/&amp;amp;amp;amp;amp;amp;gt;
+                &amp;amp;amp;amp;amp;amp;lt;/div&amp;amp;amp;amp;amp;amp;gt;
+                </noscript>
+    <!-- End Quantcast tag -->
+    <div id="completeLoginModal " class="modal hide ">
+        <div class="modal-header ">
+            <a href="# " data-dismiss="modal " aria-hidden="true " class="close ">×</a>
+            <h3>Do you want to proceed?</h3>
+        </div>
+        <div class="modal-body ">
+            <p>This page must be refreshed to complete your login.</p>
+            <p>You will lose any unsaved work once the page is refreshed.</p>
+            <br><br>
+            <p>Click "No " to cancel the login process.</p>
+            <p>Click "Yes " to continue...</p>
+        </div>
+        <div class="modal-footer ">
+            <a href="# " id="btnYes " class="btn danger ">Yes, complete login</a>
+            <a href="# " data-dismiss="modal " aria-hidden="true " class="btn secondary ">No</a>
+        </div>
+    </div>
+    <div id="forgotPasswordModal " class="modal hide ">
+        <div class="modal-header ">
+            <a href="# " data-dismiss="modal " aria-hidden="true " class="close ">×</a>
+            <h3>Password Lookup</h3>
+        </div>
+        <div class="modal-body ">
+            <form class="form form-horizontal " id="formForgotPassword ">
+                <div class="control-group ">
+                    <label class="control-label " for="inputEmail ">Email</label>
+                    <div class="controls ">
+                        <input name="_csrf " id="token " type="hidden " value="CkMEALL0JBMf5KSrOvu9izzMXCXtFQ/Hs6QUY=">
+                        <input type=" email " name="email " id="inputEmail " placeholder="you@youremail.com " required=" ">
+                        <span class="help-block "><small>Enter the email address you used to sign-up.</small></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer pull-center ">
+            <a href="# " data-dismiss="modal " aria-hidden="true " class="btn ">Cancel</a>
+            <a href="# " data-dismiss="modal " id="btnForgotPassword " class="btn btn-success ">Reset Password</a>
+        </div>
+
+    </div>
+    <div id="upgradeModal " class="modal hide ">
+        <div class="modal-header ">
+            <a href="# " data-dismiss="modal " aria-hidden="true " class="close ">×</a>
+            <h4>Would you like to upgrade?</h4>
+        </div>
+        <div class="modal-body ">
+            <p class="text-center "><strong></strong></p>
+            <h1 class="text-center ">$4<small>/mo</small></h1>
+            <p class="text-center "><small>Unlimited plys. Unlimited downloads. No Ads.</small></p>
+            <p class="text-center "><img src="/assets/i_visa.png " width="50 " alt="visa "> <img src="/assets/i_mc.png " width="50 " alt="mastercard "> <img src="/assets/i_amex.png " width="50 " alt="amex "> <img src="/assets/i_discover.png
+                " width="50 " alt="discover ">
+                <img src="/assets/i_paypal.png " width="50 " alt="paypal "></p>
+        </div>
+        <div class="modal-footer pull-center ">
+            <a href="/upgrade " class="btn btn-block btn-huge btn-success "><strong>Upgrade Now</strong></a>
+            <a href="# " data-dismiss="modal " class="btn btn-block btn-huge ">No Thanks, Maybe Later</a>
+        </div>
+    </div>
+    <div id="contactModal " class="modal hide ">
+        <div class="modal-header ">
+            <a href="# " data-dismiss="modal " aria-hidden="true " class="close ">×</a>
+            <h3>Contact Us</h3>
+            <p>suggestions, questions or feedback</p>
+        </div>
+        <div class="modal-body ">
+            <form class="form form-horizontal " id="formContact ">
+                <input name="_csrf " id="token " type="hidden " value="CkMEALL0JBMf5KSrOvu9izzMXCXtFQ/Hs6QUY=">
+                <div class=" control-group ">
+                    <label class="control-label " for="inputSender ">Name</label>
+                    <div class="controls ">
+                        <input type="text " name="sender " id="inputSender " class="input-large " placeholder="Your name ">
+                    </div>
+                </div>
+                <div class="control-group ">
+                    <label class="control-label " for="inputMessage ">Message</label>
+                    <div class="controls ">
+                        <textarea name="notes " rows="5 " id="inputMessage " class="input-large " placeholder="Type your message here "></textarea>
+                    </div>
+                </div>
+                <div class="control-group ">
+                    <label class="control-label " for="inputEmail ">Email</label>
+                    <div class="controls ">
+                        <input type="text " name="email " id="inputEmail " class="input-large " placeholder="you@youremail.com (for reply) " required=" ">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer pull-center ">
+            <a href="# " data-dismiss="modal " aria-hidden="true " class="btn ">Cancel</a>
+            <a href="# " data-dismiss="modal " aria-hidden="true " id="btnContact " role="button " class="btn btn-success ">Send</a>
+        </div>
+    </div>
+
+
+
+
+    <script src="/plugins/bootstrap-pager.js "></script>
+    </div>
+    </div>
+
+    <!-- ======== @Region: #footer ======== -->
+    <footer id="footer" class="block block-bg-grey-dark" data-block-bg-img="img/bg_footer-map.png" data-stellar-background-ratio="0.4">
+        <div class="container">
+
+            <div class="row" id="contact">
+
+                <div class="col-md-3">
+                    <address>
+              <strong>Contact details</strong>
+              <br>
+              <i class="fa fa-map-pin fa-fw text-primary"></i> Lorem ipsum dolor sit ame
+              <br>
+              <i class="fa fa-phone fa-fw text-primary"></i> 98**0 **0187
+              <br>
+              <i class="fa fa-envelope-o fa-fw text-primary"></i> info@company-name.com
+              <br>
+            </address>
+                </div>
+
+                <div class="col-md-6">
+                    <h4 class="text-uppercase">
+                        Contact Us
+                    </h4>
+                    <div class="form">
+                        <div id="sendmessage">Your message has been sent. Thank you!</div>
+                        <div id="errormessage"></div>
+                        <form action="" method="post" role="form" class="contactForm">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                <div class="validation"></div>
+                            </div>
+                            <div class="text-center"><button type="submit">Send Message</button></div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <h4 class="text-uppercase">
+                        Follow Us On:
+                    </h4>
+                    <!--social media icons-->
+                    <div class="social-media social-media-stacked">
+                        <!--@todo: replace with company social media details-->
+                        <a href="#"><i class="fa fa-twitter fa-fw"></i> Twitter</a>
+                        <a href="#"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
+                        <a href="#"><i class="fa fa-linkedin fa-fw"></i> LinkedIn</a>
+                        <a href="#"><i class="fa fa-google-plus fa-fw"></i> Google+</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row subfooter">
+                <!--@todo: replace with company copyright details-->
+                <div class="col-md-7">
+                    <p>Copyright © 2018</p>
+                </div>
+
+                <div class="col-md-5">
+                    <ul class="list-inline pull-right">
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="#top" class="scrolltop">Top</a>
+
+        </div>
+    </footer>
+    <!-- /footer end -->
+    <!-- Required JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js "></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js "></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js "></script>
+    <script src="lib/stellar/stellar.min.js "></script>
+    <script src="lib/waypoints/waypoints.min.js "></script>
+    <script src="lib/counterup/counterup.min.js "></script>
+    <script src="contactform/contactform.js "></script>
+
+    <!-- Template Specisifc Custom Javascript File -->
+    <script src="js/custom.js "></script>
+
+    <!--Custom scripts demo background & colour switcher - OPTIONAL -->
+    <script src="js/color-switcher.js "></script>
+
+    <!--Contactform script -->
+    <script src="contactform/contactform.js "></script>
+</body>
+
+</html>
